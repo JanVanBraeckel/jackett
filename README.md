@@ -10,7 +10,7 @@ Docker container which runs the latest headless jackett client with WebUI while 
 - Selectively enable or disable OpenVPN support
 - IP tables kill switch to prevent IP leaking when VPN connection fails
 - Specify name servers to add to container
-- Configure UID, GID, and UMASK for config files and downloads by jackett
+- Configure UID, GID, and UMASK for config files by jackett
 
 # Run container from Docker registry
 
@@ -42,9 +42,9 @@ $ docker run --privileged  -d \
 | `VPN_PASSWORD` | No       | If username and password provided, configures ovpn file automatically | `VPN_PASSWORD=ac98df79ed7fb`     |
 | `LAN_NETWORK`  | Yes      | Local Network with CIDR notation                                      | `LAN_NETWORK=192.168.1.0/24`     |
 | `NAME_SERVERS` | No       | Comma delimited name servers                                          | `NAME_SERVERS=8.8.8.8,8.8.4.4`   |
-| `PUID`         | No       | UID applied to config files and downloads                             | `PUID=99`                        |
-| `PGID`         | No       | GID applied to config files and downloads                             | `PGID=100`                       |
-| `UMASK`        | No       | GID applied to config files and downloads                             | `UMASK=002`                      |
+| `PUID`         | No       | UID applied to config files                                           | `PUID=99`                        |
+| `PGID`         | No       | GID applied to config files                                           | `PGID=100`                       |
+| `UMASK`        | No       | GID applied to config files                                           | `UMASK=002`                      |
 
 ## Volumes
 
